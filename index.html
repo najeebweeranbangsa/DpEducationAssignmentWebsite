@@ -19,10 +19,67 @@
                 <li><a href="#">Phone</a></li>
                 <li><a href="#">Accesories</a></li>
                 <li><a href="#">Cart</a></li>
-                <li><a href="#">Cart2</a></li>
             </ul>
         </div>
     </nav>
+    <div class="information">
+        <div class="overlay"></div>
+        <img src="images/mobile.png" alt="">
+        <div id="circle">
+            <div class="feature one">
+                <img src="images/camera.png" alt="camera">
+                <div>
+                    <h1>Camera</h1>
+                    <p>48MP, Wide angle Lens</p>
+                </div>
+            </div>
+            <div class="feature two">
+                <img src="images/processor.png" alt="processor">
+                <div>
+                    <h1>Processor</h1>
+                    <p>Snapdragon Octa core</p>
+                </div>
+            </div>
+            <div class="feature three">
+                <img src="images/display.png" alt="display">
+                <div>
+                    <h1>Display</h1>
+                    <p>6.5" Full Display</p>
+                </div>
+            </div>
+            <div class="feature four">
+                <img src="images/battery.png" alt="battery">
+                <div>
+                    <h1>Battery Life</h1>
+                    <p>5000mAh, 720Hrs Standby</p>
+                </div>
+            </div>
+        </div>
     </div>
+        <div class="controls">
+            <img src="images/arrow.png" id="upBtn">
+            <h3>Features</h3>
+            <img src="images/arrow.png" id="downBtn">
+        </div>
+    </div>
+
+    <script>
+        var circle = document.getElementById("circle");
+        var upBtn = document.getElementById("upBtn");
+        var downBtn = document.getElementById("downBtn");
+
+        var rotateBalue = circle.style.transform;
+        var rotateSum;
+        
+        upBtn.onclick =function(){
+            rotateSum = rotateValue + "rotate(-90deg)";
+            circle.style.transform = rotateSum;
+        }
+        downBtn.onclick =function(){
+            rotateSum = rotateValue + "rotate(+90deg)";
+            circle.style.transform = rotateSum;
+        }
+    </script>
+
 </body>
 </html>
